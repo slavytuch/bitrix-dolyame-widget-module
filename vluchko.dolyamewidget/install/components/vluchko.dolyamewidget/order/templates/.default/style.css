@@ -1,0 +1,65 @@
+.dolyame-payment-description
+{
+	margin-top: 5px;
+}
+
+.dolyame-payment-description__container {
+	position: relative;
+	display: inline-block;
+}
+
+.dolyame-payment-description__container--mobile {
+	display: none;
+}
+
+.dolyame-payment-description__prices {
+	position: absolute;
+	top: 24px;
+	left: 32px;
+	width: calc(100% - 64px);
+}
+
+.dolyame-payment-description__part {
+	font-size: 15px;
+	line-height: 20px;
+	width: 25%;
+	display: inline-block;
+	padding-left: 1px;
+}
+
+.dolyame-payment-description__part:nth-child(3) {
+	padding-left: 2px;
+}
+
+.dolyame-payment-description__part:nth-child(4) {
+	width: calc(25% - 12px);
+	padding-left: 4px;
+}
+
+.dolyame-payment-description__container--mobile .dolyame-payment-description__prices {
+	left: 44px;
+	top: 23px;
+	width: auto;
+}
+
+.dolyame-payment-description__container--mobile .dolyame-payment-description__part {
+	text-align: center;
+	display: block;
+	padding: 0;
+	width: 105px;
+	margin-bottom: 38px;
+}
+
+.dolyame-payment-description__container--mobile .dolyame-payment-description__part:nth-child(4) {
+	margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+	.dolyame-payment-description__container {
+		display: none;
+	}
+
+	.dolyame-payment-description__container--mobile {
+		display: block;
+	}
+}

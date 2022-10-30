@@ -1,0 +1,112 @@
+@breakpoint-mobile: 767px;
+@mobile: ~"(max-width:767px)";
+
+.dolyame-widget {
+    max-width: 290px;
+    padding: 12px 0;
+    cursor: pointer;
+
+    &__icon {
+        width: 84px;
+        height: 26px;
+        display: inline-block;
+
+        &--popup {
+            display: block;
+            margin: 0 auto 32px auto;
+            width: 200px;
+            height: 30px;
+        }
+    }
+
+    &__text {
+        display: inline-block;
+        margin-left: 16px;
+        font-size: 13px;
+        line-height: 22px;
+        font-weight: 700;
+        letter-spacing: .04em;
+    }
+
+    &__modal .tingle-modal-box {
+        max-width: 600px;
+        text-align: center;
+        width: 100%;
+    }
+
+    &__modal .tingle-modal-box__content {
+        padding: 40px;
+
+        @media @mobile {
+            padding: 16px;
+        }
+    }
+
+    &__popup {
+        position:relative;
+    }
+
+    &__popup-close {
+        position: absolute;
+        width: 32px;
+        height: 32px;
+        top: 0;
+        right: 0;
+        background-image: url("images/cross.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    &__popup-header {
+        font-size: 32px;
+        line-height: 38px;
+        margin-bottom: 16px;
+
+        @media @mobile {
+            font-size: 20px;
+            line-height: 26px;
+        }
+    }
+
+    &__popup-body {
+        font-size: 15px;
+        line-height: 24px;
+
+        @media @mobile {
+            font-size: 16px;
+        }
+    }
+
+    &__image {
+        margin: 16px 0;
+        max-width: 520px;
+        max-height: 192px;
+        width: 100%;
+
+        @media @mobile {
+            display: none;
+        }
+
+        &--mobile {
+            display: none;
+            @media @mobile {
+                margin: 16px -70px;
+                max-width: unset;
+                min-width: unset;
+                width: calc(100% + 32px);
+                display: block;
+            }
+        }
+    }
+
+    &__popup-footer {
+        color: #666;
+        font-size: 12px;
+        line-height: 20px;
+
+        a {
+            color: #1771e6;
+            text-decoration: none;
+        }
+    }
+}
